@@ -22,11 +22,37 @@ import FragmentDemo from './components/FragmentDemo';
 import Table from './components/Table';
 import PureComp from './components/PureComp';
 import ParentComp from './components/ParentComp';
+import RefsDemo from './components/Refs/RefsDemo';
+import FocusInput from './components/RefsWithClass/FocusInput';
+import FRParentInput from './components/Forwarding_Refs/FRParentInput';
+import PortalDemo from './components/Portals/PortalDemo';
+import Hero from './components/Error_Boundary/Hero';
+import ErrorBoundary from './components/Error_Boundary/ErrorBoundary';
+import ClickCounter from './components/HigherOrderComps1/ClickCounter';
+import HoverComponent from './components/HigherOrderComps1/HoverComponent';
 
 function App() {
   return (
     <div className="App">
-      <ParentComp></ParentComp>
+      <HoverComponent></HoverComponent>
+      <ClickCounter></ClickCounter>
+      {/* <ErrorBoundary>
+         <Hero heroName="Batman"></Hero>
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+         <Hero heroName="Superman"></Hero>
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+         <Hero heroName="Joker"></Hero>
+      </ErrorBoundary> */}
+      
+      {/* <PortalDemo/> */}
+      {/* <FRParentInput/> */}
+      {/* <FocusInput></FocusInput> */}
+      {/* <RefsDemo/> */}
+      {/* <ParentComp></ParentComp> */}
       {/* <Table/> */}
       {/* <FragmentDemo/> */}
       {/* <LifecycleA/> */}
