@@ -5,7 +5,7 @@ import {Greet} from './components/Greet';
 import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 import Message from './components/Message'
-import Counter from './components/Counter'
+import counter from './components/Counter'
 import FunctionClick from './components/FunctionClick'
 import ClassClick from './components/ClassClick'
 import EventBind from './components/EventBind'
@@ -30,12 +30,31 @@ import Hero from './components/Error_Boundary/Hero';
 import ErrorBoundary from './components/Error_Boundary/ErrorBoundary';
 import ClickCounter from './components/HigherOrderComps1/ClickCounter';
 import HoverComponent from './components/HigherOrderComps1/HoverComponent';
+import ClickCounterTwo from './components/RenderProps/ClickCounterTwo';
+import HoverCounterTwo from './components/RenderProps/HoverCounterTwo';
+import User from './components/RenderProps/User';
+import Counter from './components/RenderProps/Counter'
 
 function App() {
   return (
     <div className="App">
-      <HoverComponent></HoverComponent>
-      <ClickCounter></ClickCounter>
+
+      <Counter>
+        {(count, incrementCount) =>
+         <ClickCounterTwo count={count} incrementCount={incrementCount}/>
+        }
+      </Counter>
+
+      <Counter>
+        {(count, incrementCount) =>
+         <HoverCounterTwo count={count} incrementCount={incrementCount}/>
+        }
+      </Counter>
+      {/* <ClickCounterTwo/>
+      <HoverCounterTwo/>
+      <User render = {(isLoggedIn) => isLoggedIn? "Chandana": "Guest"}/> */}
+      {/* <HoverComponent></HoverComponent>
+      <ClickCounter name="chandana"></ClickCounter> */}
       {/* <ErrorBoundary>
          <Hero heroName="Batman"></Hero>
       </ErrorBoundary>
@@ -67,7 +86,7 @@ function App() {
         {/* <EventBind></EventBind> */}
        {/* <FunctionClick></FunctionClick> */}
        {/* <ClassClick></ClassClick> */}
-       {/* <Counter></Counter>  */}
+       {/* <counter></counter>  */}
 
        {/* <Greet name="chandana" lastname="priya"></Greet>
        <Greet name="roja"> <button>submit</button></Greet>
